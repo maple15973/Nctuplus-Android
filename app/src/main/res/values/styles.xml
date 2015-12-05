@@ -2,7 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">#cc0986ff</item>
+        <item name="colorPrimary">#ff0c84e8</item>
     </style>
-
 </resources>

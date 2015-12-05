@@ -24,6 +24,11 @@
             android:name=".AccountActivity"
             android:label="@string/title_activity_account" >
         </activity>
+        <activity
+            android:name=".WebActivity"
+            android:label="@string/title_activity_web"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

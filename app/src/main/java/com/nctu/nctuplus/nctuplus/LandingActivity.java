@@ -1,12 +1,15 @@
 package com.nctu.nctuplus.nctuplus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
 
 import com.nctu.nctuplus.nctuplus.api.LoginRestClientUsage;
 
@@ -15,13 +18,17 @@ public class LandingActivity extends AppCompatActivity {
     private EditText accountEditText, passwordEditText;
     private Button loginSubmitBtn;
     private LoginRestClientUsage loginRestClientUsage;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
         findViews();
-        loginRestClientUsage = new LoginRestClientUsage(this);
+        loginRestClientUsage = new LoginRestClientUsage(this, new LoginRestClientUsage.LoginListener() {
+            @Override
+            public void afterSuccess() {
+                startActivity(new Intent(LandingActivity.this,AccountActivity.class));
+            }
+        });
         loginSubmitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,27 +41,5 @@ public class LandingActivity extends AppCompatActivity {
         accountEditText = (EditText) findViewById(R.id.e3_account);
         passwordEditText = (EditText) findViewById(R.id.e3_password);
         loginSubmitBtn = (Button) findViewById(R.id.login_submit);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_account, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
