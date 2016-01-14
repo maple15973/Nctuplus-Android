@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="green" type="color">#34A014</item>
-    <item name="white" type="color">#ffffff</item>
-    <item name="blue" type="color">#cc0986ff</item>
+    <color name="transparent">#00000000</color>
+    <color name="blue">#cc0986ff</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#34A014</color>
+    <color name="red">#BCAB99</color>
 
 </resources>

@@ -8,7 +8,7 @@ import com.loopj.android.http.RequestParams;
  * Created by cober on 2015/12/4.
  */
 public class BaseRestClient {
-    public static final String BASE_URL =  "http://plus.nctu.edu.tw:4000/";
+    public static final String BASE_URL =  "https://plus.nctu.edu.tw/";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 

@@ -29,6 +29,10 @@
             android:label="@string/title_activity_web"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
+        <activity
+            android:name=".RollCallActivity"
+            android:label="@string/title_activity_roll_call" >
+        </activity>
     </application>
 
 </manifest>

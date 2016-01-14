@@ -43,11 +43,13 @@
 
     <Button
         android:id="@+id/web_btn"
-        android:textColor="@color/white"
-        android:text="全校課程"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
         android:background="@color/blue"
-        android:layout_gravity="center_horizontal|bottom" />
+        android:orientation="vertical"
+        android:text="全校課程"
+        android:textColor="@color/white" />
+
 
 </FrameLayout>
